@@ -6,5 +6,4 @@
 
 
 all:
-	cp while-ss.py while-ss
-	chmod +x while
+	sudo apt install python3
