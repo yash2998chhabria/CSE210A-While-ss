@@ -32,8 +32,8 @@ RESERVED_KEYWORDS = {
     'else': Token('else','else'),
     'while': Token('while','while'),
     'do': Token('do','do'),
-    'true': Token('true','true'),
-    'false': Token('false','false'),
+    'true': Token('true',True),
+    'false': Token('false',False),
     'skip': Token('skip','skip')
 }
 
@@ -189,11 +189,6 @@ class Num(AST):
         self.op = token.type
         self.value = token.value
 
-
-# class UnaryOp(AST):
-#     def __init__(self, op, expr):
-#         self.token = self.op = op
-#         self.expr = expr
 
 
 class Compound(AST):
