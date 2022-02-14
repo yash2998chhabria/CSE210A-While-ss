@@ -1,0 +1,22 @@
+name: Makefile While ss
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: install
+      run: make
+      
+    - name: run
+      run: ./test.sh
