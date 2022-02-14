@@ -410,7 +410,7 @@ def to_print(node):
     elif node.op in (PLUS, MINUS, MUL, EQUAL, LESSTHAN, AND, OR):
         return ''.join(['(', str(to_print(node.left)), definitions(node.op), str(to_print(node.right)), ')'])
     elif node.op in NOT:
-        return ''.join([definitions(node.op), str(to_print(node.ap))])
+        return ''.join([definitions(node.op), str(to_print(node.op))])
     elif node.op in ASSIGN:
         return ' '.join([str(to_print(node.left)), definitions(node.op), str(to_print(node.right))])
     elif node.op in SEMI:
