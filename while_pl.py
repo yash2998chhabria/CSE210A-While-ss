@@ -1,5 +1,4 @@
 import copy
-from ctypes.wintypes import BOOL
 
 
 (INTEGER, PLUS, MINUS, MUL, DIV, LPAREN, RPAREN, ID, ASSIGN, SEMI, EOF, 
@@ -189,10 +188,6 @@ class Num(AST):
         self.op = token.type
         self.value = token.value
 
-class Not:
-    def __init__(self, node):
-        self.op = 'NOT'
-        self.ap = node
 
 class Compound(AST):
     def __init__(self):
