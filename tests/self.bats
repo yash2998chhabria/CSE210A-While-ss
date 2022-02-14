@@ -1,3 +1,5 @@
+load harness
+
 @test "self-1" {
   check 'if x = 0 ∧ y < 4 then x := 14 else x := 7' '⇒ x := 14, {}
 ⇒ skip, {x → 14}'
